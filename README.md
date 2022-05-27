@@ -62,7 +62,7 @@ Below is an example of how you can instruct your audience on installing and sett
    ```
 9. configure Typescript config file, this will create a tsconfig.json file
    ```sh
-   npx tsconfig
+   tsc --init
    ```
 
 
