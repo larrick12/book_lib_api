@@ -1,0 +1,62 @@
+{
+  "name": "book_lib_api",
+  "version": "1.0.0",
+  "description": "book api for testing",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "test.ts",
+    "dev": "ts-node-dev --exit-child src/index.ts",
+    "start": "ts-node . build/index.js",
+    "prestart": "ts-node src/startdb.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larrick12/book_lib_api.git"
+  },
+  "keywords": [
+    "book",
+    "users",
+    "createbook",
+    "update_old_book",
+    "books",
+    "book_api"
+  ],
+  "author": "olawale olanrewaju (larrick12)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larrick12/book_lib_api/issues"
+  },
+  "homepage": "https://github.com/larrick12/book_lib_api#readme",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^17.0.35",
+    "@types/pg": "^8.6.5",
+    "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
+  },
+  "diresctories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "babel-preset": "^1.1.7",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "faker": "^5.5.3",
+    "graphql": "^16.5.0",
+    "graphql-playground-middleware-express": "^1.7.23",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.3",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4"
+  }
+}
