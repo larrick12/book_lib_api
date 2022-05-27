@@ -3,16 +3,33 @@ dotenv.config();
 
 const { env } = process;
 
-const config = {
-    environment: env.NODE_ENV,
-    port: env.PORT || 8050,
-    db_uri: env.DB_URI || 'postgresql://postgres:larrick1258@localhost:5432/booklibrary',
-    secret: env.SECRET,
-    dbName: env.DB_NAME || 'bookuser',
-    dbName_book: env.DB_NAME_BOOK || 'book',
-    dbName_comment: env.DB_NAME_COMMENT || 'comment',
-    graphql_path: env.GRAPHQL_PATH || '/graphql',
-    
-}
+let config: any;
+
+switch(env.NODE_ENV){
+    case "production" :
+        config = { 
+        environment: env.NODE_ENV,
+        port: env.PORT,
+        db_uri: env.HEROKU_PSQL_URI,
+        secret: env.SECRET,
+        dbName: env.DB_NAME,
+        dbName_book: env.DB_NAME_BOOK,
+        dbName_comment: env.DB_NAME_COMMENT,
+        graphql_path: env.GRAPHQL_PATH
+        }
+        break;
+    case "development" : 
+        config = { 
+        environment: env.NODE_ENV,
+        port: env.PORT || 8050,
+        db_uri: env.DB_URI,
+        secret: env.SECRET,
+        dbName: env.DB_NAME,
+        dbName_book: env.DB_NAME_BOOK,
+        dbName_comment: env.DB_NAME_COMMENT,
+        graphql_path: env.GRAPHQL_PATH,
+        }
+} 
+   
 
 export default config

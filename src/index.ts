@@ -30,7 +30,6 @@ app.use(env.graphql_path, graphqlHTTP((req, res, next) => ({
 }))
 )
 
-
 app.get(env.graphql_path, expressPlayground({endpoint: '/graphql'}))
 
 server.listen(env.port).on('listening', () => {
