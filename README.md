@@ -6,7 +6,7 @@
   </a>
   <h3 align="center">TEMPLATE BOOK LIB API</h3>
   <p align="center">
-    <a href="https://github.com/larrick12/book_lib_api/issues">Report Bug</a>
+    <a href="https://github.com/larrick12/book_lib_api/issues">Report Bug</a> . 
     <a href="https://booktemplib.herokuapp.com/graphql">Book Api - Heroku</a>
   </p>
 </div>
@@ -50,7 +50,7 @@ Below is an example of how you can instruct your audience on installing and sett
    ```
 6. Install YARN or NPM Typescript packages 
    ```sh
-   npm i typescript or yarn i typescript
+   npm i typescript or yarn install typescript
    ```
 7. Install YARN or NPM other packages 
    ```sh
@@ -68,6 +68,25 @@ Below is an example of how you can instruct your audience on installing and sett
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+### GraphQL Query and Mutation usage to create, update and delete book.
+
+* Examples
+[x] To create Book
+    ```sh
+    mutation{
+        addbooks(title: "new book", content: "this is book content."){
+            title
+            bid
+            author
+            content
+            created_on
+            user_id
+            message
+            status
+        }
+    }
+    ```
 
 
 
